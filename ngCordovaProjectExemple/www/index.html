@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+
+    <!--
+        Personnalisez la stratégie de sécurité de contenu dans la balise méta ci-dessous selon vos besoins. Ajoutez 'unsafe-inline' à default-src pour activer JavaScript directement dans les lignes.
+        Pour obtenir des détails, consultez http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+    <title>EuroVelo</title>
+
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet" />
+
+
+    <!-- Libs -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- Controllers -->
+    <script src="scripts/controller.js"></script>
+
+    <!-- Services -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Inclusions (modules, translation, ...) -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+</head>
+<body ng-app="euroVeloApp">
+
+<div ng-view ng-controller="Controller"></div>
+
+<!-- Référence Cordova ajoutée à votre application une fois générée. -->
+<script type="text/javascript" src="bower_components/ngCordova/dist/ng-cordova.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
